@@ -1,0 +1,16 @@
+<%= form_with(model: place, local: true) do |form| %>
+  <% if place.errors.any? %>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name, "Name" %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= form.label :address, "Address" %>
+    <%= form.text_field :capacity %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,36 @@
+<% if can? :manage, @events %>
+  <%= form_with(model: event, local: true) do |form| %>
+    <% if event.errors.any %>
+      <div id="error_explanation">
+        <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+        <ul>
+          <% event.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= form.label :name, "Name" %>
+      <%= form.text_field :name %>
+    </div>
+    <div class="form-group">
+      <%= form.label :place_id, "Place" %>
+      <%= form.text_field :place_id %>
+    </div>
+    <div class="form-group">
+      <%= form.label :start_date, "Start Date" %>
+      <%= form.datetime_select :start_date %>
+    </div>
+    <div class="form-group">
+      <%= form.label :description, "Description"%>
+      <%= form.text_field :decription %>
+    </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  <% else %>
+  <b>Error</b>, you do not have permission to access here
+<% end %>

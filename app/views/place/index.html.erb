@@ -1,0 +1,18 @@
+<h1>Place#index</h1>
+<tbody>
+<% @places.each do |place| %>
+  <tr>
+    <td><%= place.name %></td>
+    <td><%= link_to 'Show', place %></td>
+    <% if can? :manage, @place %>
+      <td><%= link_to 'Edit', edit_places_path(place) %></td>
+      <td><%= link_to 'Destroy', place, method: delete, data:{confirm: 'are you sure?'} %></td>
+    <% end %>
+  </tr>
+<% end %>
+</tbody>
+
+<br>
+<% if can? :manager, @place %>
+  <%= link_to 'New Event', new_places_path %>
+<% end %>

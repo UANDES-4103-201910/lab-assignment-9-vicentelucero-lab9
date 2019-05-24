@@ -6,8 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :phone
       t.string :password
       t.string :address
-      t.string :provider
-      t.string :uid
+      t.boolean :admin
 
       t.timestamps
     end

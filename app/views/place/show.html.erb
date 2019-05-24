@@ -1,0 +1,9 @@
+<h1>Place#show</h1>
+<p><%= @place.name %></p>
+<p><%= @place.description %></p>
+
+<%= if can? :manage %>
+  <%= link_to "edit", edit_places_path(@place) %>
+  <%= link_to "delete", @event, method: destroy, data:{confirm: "are you sure?"} %>
+<% end %>
+

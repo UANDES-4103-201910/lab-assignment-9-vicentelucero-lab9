@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '4a9e292f0af9145f3928e2cce6a111e16aace95a1aaec26c3224523e19c317e15ac70bd69d0db2a579a797ee0568d8c60df39af5608af975a6b23c29bc665ac9'
+  # config.secret_key = '236ee13c6603d3fe38a27fd5066daf34f5afa33faabfd627c4bfa4bc9ed6a79e6b8b986b84f71d3f2efcf5363ba50703cec4bc159c1e797e3a387b505bf6e3d3'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -19,7 +19,6 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-  config.omniauth :facebook, "2320797654834536", "app_secret"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -115,7 +114,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '817c8c7b847a8bbad3d1129d727cb47133d75ac1aeaae3364d720ea36c4328f7e545daab664810ad8a9081cd806828d171fd86917abb1624afd4877fad688ee2'
+  # config.pepper = 'cf1289b57aa3c27f21a4cebe33434ae7811de8f40f1c6bc6da660f6ee569676d81e534cd3112767bb41295a9a87298e3b5229fed6f0177ce7acf3c22a1707b37'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
